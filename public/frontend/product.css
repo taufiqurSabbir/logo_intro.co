@@ -1,0 +1,80 @@
+.card {
+  height: 380px;
+  width: 292px;
+  background: var(--card);
+  border-radius: 20px;
+  padding: 10px;
+  font-family: Montserrat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--text);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 3rem;
+  margin-bottom: 1.5rem;
+  -webkit-transition: background 0.3s, -webkit-transform 0.3s;
+  transition: background 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, background 0.3s;
+  transition: transform 0.3s, background 0.3s, -webkit-transform 0.3s;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.card img {
+  width: 172px;
+  height: 128px;
+  border-radius: 14px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card__title {
+  color: var(--text);
+  margin-top: 21px;
+  font-size: 13px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  opacity: 0.6;
+}
+
+.card__description {
+  margin-top: 8px;
+  display: block;
+  font-size: 15px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.card__action {
+  height: 40px;
+  color: white;
+  width: 100px;
+  outline: none;
+  border: none;
+  background: #FE6F42;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.card__action span {
+  color: #fff;
+  font-size: 28px;
+}
+
+.price {
+  color: #1D5C63;
+  font-weight: bold;
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*# sourceMappingURL=product.css.map */

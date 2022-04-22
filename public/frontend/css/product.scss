@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 30px;
+    background-color: #171717;
+}
+
+:root {
+    --secondary: linear-gradient(221deg, #8743ff, #4136f1 60%);
+    --body: #eaf2ff;
+    --card: #fff;
+    --text: #4523c6;
+}
+
+body {
+    background: var(--body);
+    transition: background 0.3s;
+    gap: 20px;
+    &.dark {
+        --body: #171717;
+        --text: #fff;
+        --card: #0d0d0d;
+    }
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: var(--secondary);
+    transition: background 0.3s;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #fff;
+}
+
+.card {
+    height: 380px;
+    width: 292px;
+    background: var(--card);
+    border-radius: 20px;
+    padding: 10px;
+    font-family: Montserrat;
+    display: flex;
+    color: var(--text);
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, background 0.3s;
+    &:hover {
+        transform: scale(1.3);
+    }
+    & img {
+        width: 172px;
+        height: 128px;
+        border-radius: 14px;
+        object-fit: cover;
+    }
+    &__title {
+        color: var(--text);
+        margin-top: 21px;
+        font-size: 13px;
+        transition: color 0.3s;
+        opacity: 0.6;
+    }
+    &__description {
+        margin-top: 8px;
+        display: block;
+        font-size: 15px;
+        transition: color 0.3s;
+    }
+    &__action {
+        height: 40px;
+        color: white;
+        width: 100px;
+        outline: none;
+        border: none;
+        background: var(--secondary);
+        border-radius: 12px;
+        cursor: pointer;
+        margin-top: auto;
+        & span {
+            color: #fff;
+            font-size: 28px;
+        }
+    }
+}
